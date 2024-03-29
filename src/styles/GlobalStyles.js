@@ -21,9 +21,12 @@ const GlobalStyles = createGlobalStyle`
   --color-gray-600: #505050;
   --color-gray-dark: #1C1C1C;
 
-  --max-width: 1500px;
+  --navbar-height-desctop: 8.6rem;
+  --navbar-height-mobile: 5.6rem;
+
+  --max-width: 1200px;
   --tablet: 1024px;
-  --mobile : 760px;
+  --mobile : 768px;
 }
 
 *,
@@ -41,7 +44,7 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: var(--color-gray-100);
   position: relative;
   min-height: 100vh;
@@ -85,7 +88,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--color-gray-dark);
+color: var(--color-gray-dark);
 font-weight: 600;
 line-height: normal;
 letter-spacing: -1.6px;
