@@ -5,30 +5,81 @@ import SearchForm from "./SearchForm";
 import { useState } from "react";
 import useIsMobile from "../../hooks/useIsMobile";
 import SidebarMobile from "./SidebarMobile";
+import CategoriesHeader from "./CategoriesHeader";
+import ShopHeader from "./ShopHeader";
+
+const categories = [
+  "electronics",
+  "jewelery",
+  "men's clothing",
+  "women's clothing",
+];
+
+const contries = [
+  {
+    flag: "/assets/flags/us.svg",
+    name: "United States",
+  },
+  {
+    flag: "/assets/flags/gb.svg",
+    name: "United Kingdom",
+  },
+  {
+    flag: "/assets/flags/au.svg",
+    name: "Australia",
+  },
+  {
+    flag: "/assets/flags/ae.svg",
+    name: "Emirates",
+  },
+  {
+    flag: "/assets/flags/cn.svg",
+    name: "China",
+  },
+  {
+    flag: "/assets/flags/de.svg",
+    name: "Germany",
+  },
+  {
+    flag: "/assets/flags/fr.svg",
+    name: "France",
+  },
+  {
+    flag: "/assets/flags/dk.svg",
+    name: "Denmark",
+  },
+  {
+    flag: "/assets/flags/it.svg",
+    name: "Italy",
+  },
+  {
+    flag: "/assets/flags/ru.svg",
+    name: "Russia",
+  },
+];
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const isMobile = useIsMobile();
   return (
     <StyledNavbar>
-      <ContentWrapper>
+      <NavbarContainer>
         <BurgerIcon
           onClick={() => setIsOpen(!isOpen)}
           src="/assets/icons/control/menu.svg"
           alt="menu"
         />
         <Logo />
-        <SearchForm
-          categories={[
-            "electronics",
-            "jewelery",
-            "men's clothing",
-            "women's clothing",
-          ]}
-        />
+        <SearchForm categories={categories} />
         <Actions />
         <SidebarMobile onClose={() => setIsOpen(false)} isOpen={isOpen} />
-      </ContentWrapper>
+      </NavbarContainer>
+      <Header>
+        <ContentWrapper>
+          <CategoriesHeader categories={categories} />
+          <ShopHeader countries={contries} />
+        </ContentWrapper>
+      </Header>
     </StyledNavbar>
   );
 }
@@ -40,6 +91,7 @@ const StyledNavbar = styled.nav`
 
 const BurgerIcon = styled.img`
   display: none;
+  line-height: 1;
   @media only screen and (max-width: 768px) {
     display: block;
     height: 3rem;
@@ -52,7 +104,7 @@ const BurgerIcon = styled.img`
   }
 `;
 
-const ContentWrapper = styled.div`
+const NavbarContainer = styled.div`
   max-width: var(--max-width);
   margin: 0 auto;
   height: var(--navbar-height-desctop);
@@ -71,6 +123,27 @@ const ContentWrapper = styled.div`
     height: var(--navbar-height-mobile);
     margin-bottom: 11rem;
   }
+`;
+
+const Header = styled.div`
+  width: 100%;
+  height: var(--navbar-height-mobile);
+  border-top: 1px solid var(--color-gray-300);
+  border-bottom: 1px solid var(--color-gray-300);
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const ContentWrapper = styled.div`
+  width: 100%;
+  padding: 0 2rem;
+  height: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export default Navbar;

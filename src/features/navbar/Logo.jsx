@@ -4,16 +4,20 @@ import { Link } from "react-router-dom";
 
 function Logo() {
   return (
-    <Link to="/">
-      <StyledLogo src={logoDark} />
-    </Link>
+    <StyledLogo to="/">
+      <img src={logoDark} alt="logo" />
+    </StyledLogo>
   );
 }
 
-const StyledLogo = styled.img`
-  height: 4.6rem;
-  @media only screen and (max-width: 768px) {
-    height: 3.6rem;
+const StyledLogo = styled(Link)`
+  display: flex;
+  align-items: center;
+  img {
+    height: 4.6rem;
+    @media only screen and (max-width: 768px) {
+      height: 3rem;
+    }
   }
 `;
 
