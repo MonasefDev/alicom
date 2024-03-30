@@ -2,12 +2,21 @@ import styled from "styled-components";
 import Logo from "./Logo";
 import Actions from "./Actions";
 import SearchForm from "./SearchForm";
+import { useState } from "react";
+import useIsMobile from "../../hooks/useIsMobile";
+import SidebarMobile from "./SidebarMobile";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const isMobile = useIsMobile();
   return (
     <StyledNavbar>
       <ContentWrapper>
-        <BurgerIcon src="/assets/icons/control/menu.svg" alt="menu" />
+        <BurgerIcon
+          onClick={() => setIsOpen(!isOpen)}
+          src="/assets/icons/control/menu.svg"
+          alt="menu"
+        />
         <Logo />
         <SearchForm
           categories={[
@@ -18,6 +27,7 @@ function Navbar() {
           ]}
         />
         <Actions />
+        <SidebarMobile onClose={() => setIsOpen(false)} isOpen={isOpen} />
       </ContentWrapper>
     </StyledNavbar>
   );
@@ -32,7 +42,13 @@ const BurgerIcon = styled.img`
   display: none;
   @media only screen and (max-width: 768px) {
     display: block;
-    height: 2.4rem;
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    &:hover {
+      filter: invert(0.5) sepia(1) saturate(3) hue-rotate(175deg);
+    }
   }
 `;
 

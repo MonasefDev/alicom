@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
 function Home() {
-  return <StyledHome>Home</StyledHome>;
+  return (
+    <StyledHome>
+      <h1>Home</h1>
+    </StyledHome>
+  );
 }
 
 const StyledHome = styled.div`
