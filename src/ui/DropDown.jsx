@@ -53,12 +53,12 @@ const List = ({ children, name }) => {
 };
 
 const Item = ({ children, onChange }) => {
-  const { toggle } = useContext(DropdownContext);
+  const { close } = useContext(DropdownContext);
   return (
     <StyledItem
       onClick={() => {
         onChange();
-        toggle();
+        close();
       }}
     >
       {children}
