@@ -1,15 +1,7 @@
-import styled from "styled-components";
+import HomeLayout from "../features/home/HomeLayout";
 
 function Home() {
-  return (
-    <StyledHome>
-      <h1>Home</h1>
-    </StyledHome>
-  );
+  return <HomeLayout />;
 }
-
-const StyledHome = styled.div`
-  /* height: max-content; */
-`;
 
 export default Home;

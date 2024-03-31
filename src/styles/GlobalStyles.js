@@ -4,8 +4,10 @@ const GlobalStyles = createGlobalStyle`
 :root {
   --color-blue-dark: #0D6EFD;
   --color-blue-light: #E3F0FF;
+  --color-green-blue : #55BDC3;
   --color-green-dark: #00B517;
   --color-green-light: #C3FFCB;
+  --color-orange-darker: #FF6F00;
   --color-orange-dark: #FF9017;
   --color-orange-dark: #FFE5BF;
   --color-red : #FA3434;
