@@ -60,7 +60,6 @@ function SidebarMobile({ onClose, isOpen }) {
     onClose();
   };
   const length = (Arr, index) => {
-    console.log(Arr, index);
     let count = 0;
     for (let i = 0; i < index; i++) {
       count += Arr[i].length;

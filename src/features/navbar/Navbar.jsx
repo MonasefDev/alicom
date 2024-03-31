@@ -57,7 +57,33 @@ const contries = [
     name: "Russia",
   },
 ];
-
+const currencies = [
+  {
+    code: "USD",
+    label: "US Dollar",
+    symbol: "$",
+  },
+  {
+    code: "EUR",
+    label: "Euro",
+    symbol: "€",
+  },
+  {
+    code: "JPY",
+    label: "Japanese Yen",
+    symbol: "¥",
+  },
+  {
+    code: "GBP",
+    label: "British Pound",
+    symbol: "£",
+  },
+  {
+    code: "AUD",
+    label: "Australian Dollar",
+    symbol: "A$",
+  },
+];
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const isMobile = useIsMobile();
@@ -77,7 +103,7 @@ function Navbar() {
       <Header>
         <ContentWrapper>
           <CategoriesHeader categories={categories} />
-          <ShopHeader countries={contries} />
+          <ShopHeader currencies={currencies} countries={contries} />
         </ContentWrapper>
       </Header>
     </StyledNavbar>
@@ -130,20 +156,21 @@ const Header = styled.div`
   height: var(--navbar-height-mobile);
   border-top: 1px solid var(--color-gray-300);
   border-bottom: 1px solid var(--color-gray-300);
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1024px) {
     display: none;
   }
 `;
 
 const ContentWrapper = styled.div`
   width: 100%;
-  padding: 0 2rem;
+  padding: 0 1rem;
   height: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem;
 `;
 
 export default Navbar;

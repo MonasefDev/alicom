@@ -1,23 +1,13 @@
 import styled from "styled-components";
-import ProductCard from "../ui/ProductCard";
 
 function Home() {
-  return (
-    <StyledHome>
-      <h1>Home</h1>
-      <ProductCard
-        title="Regular Fit Resort Shirt"
-        price="57.70"
-        imageUrl="/path/to/shirt-image.jpg"
-        rating="7.5"
-        ordersCount="154"
-      />
-    </StyledHome>
-  );
+  return <StyledHome>home</StyledHome>;
 }
 
 const StyledHome = styled.div`
   /* height: max-content; */
+  /* display: flex;
+  gap: 3rem; */
 `;
 
 export default Home;
