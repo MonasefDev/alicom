@@ -1,12 +1,14 @@
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 import Navbar from "../features/navbar/Navbar";
+import { useState } from "react";
 
 const StyledAppLayout = styled.main`
   height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
+  overflow: ${(pros) => (pros.$isOpen ? "hidden" : "auto")};
 `;
 
 const Container = styled.div`
@@ -17,9 +19,10 @@ const Container = styled.div`
   flex-direction: column;
 `;
 function AppLayout() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
   return (
-    <StyledAppLayout>
-      <Navbar />
+    <StyledAppLayout $isOpen={isNavOpen}>
+      <Navbar isOpen={isNavOpen} setIsOpen={setIsNavOpen} />
       <Container>
         <Outlet />
       </Container>

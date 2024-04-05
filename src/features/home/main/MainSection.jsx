@@ -1,52 +1,14 @@
 import { useState } from "react";
 import styled from "styled-components";
 import UserCard from "./UserCard";
-
-const categories = [
-  {
-    name: "Automobiles",
-    bannerImage: "assets/images/categories/1.webp",
-  },
-  {
-    name: "Clothes and wear",
-    bannerImage: "assets/images/categories/2.webp",
-  },
-  {
-    name: "Home interiors",
-    bannerImage: "assets/images/categories/3.webp",
-  },
-  {
-    name: "Computer and tech",
-    bannerImage: "assets/images/categories/4.webp",
-  },
-  {
-    name: "Tools, equipments",
-    bannerImage: "assets/images/categories/1.webp",
-  },
-  {
-    name: "Sports and outdoor",
-    bannerImage: "assets/images/categories/2.webp",
-  },
-  {
-    name: "Animal and pets",
-    bannerImage: "assets/images/categories/3.webp",
-  },
-  {
-    name: "Machinery tools",
-    bannerImage: "assets/images/categories/4.webp",
-  },
-  {
-    name: "More category",
-    bannerImage: "assets/images/categories/1.webp",
-  },
-];
+import { categoriesMain } from "../../../data/product-data";
 
 function MainSection() {
-  const [category, setCategory] = useState(categories[0]);
+  const [category, setCategory] = useState(categoriesMain[0]);
   return (
     <StyledMainSection>
       <Sidebar>
-        {categories.map((item) => (
+        {categoriesMain.map((item) => (
           <div
             className={item.name === category.name ? "active" : ""}
             key={item.name}
@@ -86,6 +48,8 @@ const StyledMainSection = styled.div`
   @media only screen and (max-width: 768px) {
     grid-template-columns: 1fr;
     height: calc(100vw / 1.7);
+    padding: 0;
+    border-radius: 0;
   }
 `;
 
@@ -95,6 +59,7 @@ const Sidebar = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 0;
   & > div {
     width: 100%;
     padding: 0.5rem 1rem;
@@ -120,7 +85,6 @@ const Sidebar = styled.div`
 `;
 
 const Banner = styled.div`
-  position: relative;
   height: 100%;
   width: 100%;
   padding: 5rem;
