@@ -84,9 +84,7 @@ const currencies = [
     symbol: "A$",
   },
 ];
-function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const isMobile = useIsMobile();
+function Navbar({ isOpen, setIsOpen }) {
   return (
     <StyledNavbar>
       <NavbarContainer>
@@ -131,6 +129,7 @@ const BurgerIcon = styled.img`
 `;
 
 const NavbarContainer = styled.div`
+  position: relative;
   max-width: var(--max-width);
   margin: 0 auto;
   height: var(--navbar-height-desctop);

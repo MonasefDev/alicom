@@ -85,8 +85,10 @@ const StyledDropdown = styled.div`
 `;
 
 const StyledSelect = styled.div`
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
   span {
     font-size: 1.6rem;
@@ -114,6 +116,7 @@ const StyledList = styled.div`
   transition: all 0.3s ease-in-out;
   opacity: ${(props) => (props.$isOpen ? "1" : "0")};
   max-height: ${(props) => (props.$isOpen ? "25rem" : "0")};
+  z-index: 999;
   border: ${(props) =>
     props.$isOpen
       ? "1px solid var(--color-gray-300)"

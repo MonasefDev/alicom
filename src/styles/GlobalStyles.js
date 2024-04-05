@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
   --color-orange-dark: #FF9017;
   --color-orange-dark: #FFE5BF;
   --color-red : #FA3434;
+  --color-red-light: #FFE3E3;
   
   --color-white : #ffffff;
   --color-black : #000000;
@@ -96,7 +97,7 @@ h6 {
 color: var(--color-gray-dark);
 font-weight: 600;
 line-height: normal;
-letter-spacing: -1.6px;
+letter-spacing: -1px;
 }
 h1{
 font-size: 4.8rem;
@@ -126,11 +127,11 @@ img {
   max-width: 100%;
 }
 
-/* ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+ ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
-
+/*
 ::-webkit-scrollbar-thumb {
     background: var(--color-pink);
     border-radius: .5rem
