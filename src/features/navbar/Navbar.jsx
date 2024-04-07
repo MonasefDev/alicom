@@ -2,11 +2,10 @@ import styled from "styled-components";
 import Logo from "./Logo";
 import Actions from "./Actions";
 import SearchForm from "./SearchForm";
-import { useState } from "react";
-import useIsMobile from "../../hooks/useIsMobile";
 import SidebarMobile from "./SidebarMobile";
 import CategoriesHeader from "./CategoriesHeader";
 import ShopHeader from "./ShopHeader";
+import { countries } from "../../data/product-data";
 
 const categories = [
   "electronics",
@@ -15,48 +14,6 @@ const categories = [
   "women's clothing",
 ];
 
-const contries = [
-  {
-    flag: "/assets/flags/us.svg",
-    name: "United States",
-  },
-  {
-    flag: "/assets/flags/gb.svg",
-    name: "United Kingdom",
-  },
-  {
-    flag: "/assets/flags/au.svg",
-    name: "Australia",
-  },
-  {
-    flag: "/assets/flags/ae.svg",
-    name: "Emirates",
-  },
-  {
-    flag: "/assets/flags/cn.svg",
-    name: "China",
-  },
-  {
-    flag: "/assets/flags/de.svg",
-    name: "Germany",
-  },
-  {
-    flag: "/assets/flags/fr.svg",
-    name: "France",
-  },
-  {
-    flag: "/assets/flags/dk.svg",
-    name: "Denmark",
-  },
-  {
-    flag: "/assets/flags/it.svg",
-    name: "Italy",
-  },
-  {
-    flag: "/assets/flags/ru.svg",
-    name: "Russia",
-  },
-];
 const currencies = [
   {
     code: "USD",
@@ -101,7 +58,7 @@ function Navbar({ isOpen, setIsOpen }) {
       <Header>
         <ContentWrapper>
           <CategoriesHeader categories={categories} />
-          <ShopHeader currencies={currencies} countries={contries} />
+          <ShopHeader currencies={currencies} countries={countries} />
         </ContentWrapper>
       </Header>
     </StyledNavbar>

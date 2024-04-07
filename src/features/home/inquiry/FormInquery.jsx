@@ -8,7 +8,7 @@ function FormInquery() {
   const [message, setMessage] = useState("");
   const quantitiesUnit = ["Pcs", "Kg", "Labs"];
   const [selectedItem, setSelectedItem] = useState(quantitiesUnit[0]);
-  const [quantity, setQuantity] = useState(null);
+  const [quantity, setQuantity] = useState("");
   return (
     <StyledForm>
       <h4>Send quote to suppliers</h4>

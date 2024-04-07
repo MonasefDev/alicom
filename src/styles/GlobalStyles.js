@@ -125,6 +125,7 @@ p,div{
 
 img {
   max-width: 100%;
+  transform: scale(1);
 }
 
  ::-webkit-scrollbar {
