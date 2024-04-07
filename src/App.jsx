@@ -5,11 +5,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import AppLayout from "./ui/AppLayout";
 import { useEffect } from "react";
-import { getProducts } from "./services/FakeStoreApi";
+import { getCategories, getProducts } from "./services/fakeStoreApi";
 
 function App() {
   useEffect(() => {
     getProducts();
+    getCategories();
   }, []);
   const queryClient = new QueryClient({
     defaultOptions: {

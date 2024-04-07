@@ -10,3 +10,14 @@ export async function getProducts() {
     return error;
   }
 }
+
+export async function getCategories() {
+  try {
+    const { data } = await axios.get(BASE_URL + "/products/categories");
+    console.log(data);
+    return data;
+  } catch (error) {
+    console.error(error);
+    return error;
+  }
+}
