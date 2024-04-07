@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 import Navbar from "../features/navbar/Navbar";
 import { useState } from "react";
+import Footer from "../features/footer/Footer";
 
 const StyledAppLayout = styled.main`
   height: 100vh;
@@ -13,8 +14,6 @@ const StyledAppLayout = styled.main`
 
 const Container = styled.div`
   width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
 `;
@@ -26,7 +25,7 @@ function AppLayout() {
       <Container>
         <Outlet />
       </Container>
-      <footer>Footer</footer>
+      <Footer />
     </StyledAppLayout>
   );
 }

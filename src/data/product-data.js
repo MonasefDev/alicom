@@ -1,3 +1,56 @@
+export const countries = [
+  {
+    flag: "/assets/flags/us.svg",
+    name: "United States",
+    url: "nameshop.us",
+  },
+  {
+    flag: "/assets/flags/gb.svg",
+    name: "United Kingdom",
+    url: "nameshop.uk",
+  },
+  {
+    flag: "/assets/flags/au.svg",
+    name: "Australia",
+    url: "nameshop.au",
+  },
+  {
+    flag: "/assets/flags/ae.svg",
+    name: "Emirates",
+    url: "nameshop.ae",
+  },
+  {
+    flag: "/assets/flags/cn.svg",
+    name: "China",
+    url: "nameshop.cn",
+  },
+  {
+    flag: "/assets/flags/de.svg",
+    name: "Germany",
+    url: "nameshop.de",
+  },
+  {
+    flag: "/assets/flags/fr.svg",
+    name: "France",
+    url: "nameshop.fr",
+  },
+  {
+    flag: "/assets/flags/dk.svg",
+    name: "Denmark",
+    url: "nameshop.dk",
+  },
+  {
+    flag: "/assets/flags/it.svg",
+    name: "Italy",
+    url: "nameshop.it",
+  },
+  {
+    flag: "/assets/flags/ru.svg",
+    name: "Russia",
+    url: "nameshop.ru",
+  },
+];
+
 export const productsDiscount = [
   {
     id: 1,
@@ -205,6 +258,33 @@ export const recommendedItems = [
     name: "Jeans bag for travel for men",
     price: 80.95,
     imageUrl: "assets/images/cloth/6.png", // replace with your actual image path
+  },
+];
+
+export const servicesData = [
+  {
+    id: 1,
+    title: "Source from Industry Hubs",
+    bgBanner: "assets/images/services/1.png",
+    icon: "assets/icons/control/search_dark.svg",
+  },
+  {
+    id: 2,
+    title: "Customize Your Products",
+    bgBanner: "assets/images/services/2.png",
+    icon: "assets/icons/inventory_2.svg",
+  },
+  {
+    id: 3,
+    title: "Fast, reliable shipping by ocean or air",
+    bgBanner: "assets/images/services/3.png",
+    icon: "assets/icons/control/send.svg",
+  },
+  {
+    id: 4,
+    title: "Product monitoring and inspection",
+    bgBanner: "assets/images/services/4.png",
+    icon: "assets/icons/security.svg",
   },
 ];
 

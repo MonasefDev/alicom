@@ -37,7 +37,7 @@ const ProductList = styled.div`
     grid-template-rows: repeat(3, 1fr);
     grid-auto-rows: 0;
     overflow: hidden;
-    margin-bottom: -1rem;
+    margin-bottom: -2rem;
   }
 `;
 
