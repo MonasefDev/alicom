@@ -123,6 +123,7 @@ const StyleSidebar = styled.div`
   transition: all 0.3s ease-in-out;
   width: ${(pros) => (pros.$isOpen ? "100%" : "0")};
   overflow: hidden;
+  z-index: 99999;
 `;
 
 const Sidebar = styled.div`

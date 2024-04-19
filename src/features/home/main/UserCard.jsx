@@ -62,7 +62,7 @@ const UserCard = () => (
         let’s get started
       </GreetingText>
     </ProfileContainer>
-    <ActionButton primary>Join now</ActionButton>
+    <ActionButton primary="true">Join now</ActionButton>
     <ActionButton>Log in</ActionButton>
   </CardContainer>
 );

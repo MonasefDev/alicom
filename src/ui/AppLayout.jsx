@@ -7,8 +7,10 @@ import Footer from "../features/footer/Footer";
 const StyledAppLayout = styled.main`
   height: 100vh;
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: max-content 1fr max-content;
   overflow: ${(pros) => (pros.$isOpen ? "hidden" : "auto")};
 `;
 

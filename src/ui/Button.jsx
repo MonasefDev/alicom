@@ -51,21 +51,20 @@ const variations = {
       color: var(--color-blue-dark);
     }
   `,
-  //   secondary: css`
-  //     color: var(--color-grey-600);
-  //     background: var(--color-grey-0);
-  //     border: 1px solid var(--color-grey-200);
-  //     &:hover {
-  //       background-color: var(--color-grey-50);
-  //     }
-  //   `,
-  //   danger: css`
-  //     color: var(--color-red-100);
-  //     background-color: var(--color-red-700);
-  //     &:hover {
-  //       background-color: var(--color-red-800);
-  //     }
-  //   `,
+  // secondary: css`
+  //   width: 100%;
+  //   color: var(--color-blue-dark);
+  //   padding: 0.8rem 2rem;
+  //   border-radius: 6px;
+  //   border: 1px solid var(--color-gray-300);
+  //   box-shadow: 0px 1px 2px 0px rgba(56, 56, 56, 0.08);
+  //   cursor: pointer;
+  //   transition: all 0.2s ease-in-out;
+  //   &:hover {
+  //     color: var(--color-white);
+  //     background-color: var(--color-blue-dark);
+  //   }
+  // `,
 };
 
 const Button = styled.button`
