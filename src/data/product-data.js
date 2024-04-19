@@ -326,3 +326,58 @@ export const categoriesMain = [
     bannerImage: "assets/images/categories/1.webp",
   },
 ];
+// const generateRandomProducts = (data) => {
+//   const getRandomElement = (array) =>
+//     array[Math.floor(Math.random() * array.length)];
+//   const getRandomFeatures = (features) =>
+//     Array.from({ length: 3 }, () => getRandomElement(features));
+
+//   const capitalize = (string) =>
+//     string.charAt(0).toUpperCase() + string.slice(1);
+
+//   return data.categories.flatMap((category) => {
+//     return Array.from({ length: 10 }, (_, index) => {
+//       const brand = getRandomElement(category.brands);
+//       const name = `${capitalize(brand)} ${capitalize(
+//         category.category
+//       )} Product ${index + 1}`;
+//       const price = Math.random() * 1000;
+//       const originalPrice = price + Math.random() * 200;
+//       const rating = Math.random() * 4 + 1; // from 1 to 5
+//       const orders = Math.floor(Math.random() * 500) + 1;
+//       const posterNumber = Math.floor(Math.random() * 10) + 1;
+//       const poster = `assets/images/${category.category}/${posterNumber}.svg`;
+//       const images = Array.from(
+//         { length: 3 },
+//         (_, imgIndex) =>
+//           `assets/images/${category.category}/${posterNumber}${
+//             imgIndex + 1
+//           }.svg`
+//       );
+
+//       return {
+//         id: `${category.category}-${brand}-${index}`,
+//         category: category.category,
+//         name,
+//         brand,
+//         features: getRandomFeatures(category.features),
+//         condition: "Brand new",
+//         description: `${name} with ${getRandomFeatures(category.features).join(
+//           ", "
+//         )}.`,
+//         price: parseFloat(price.toFixed(2)),
+//         originalPrice: parseFloat(originalPrice.toFixed(2)),
+//         rating: parseFloat(rating.toFixed(1)),
+//         orders,
+//         shipping: "Free Shipping",
+//         poster,
+//         images,
+//         verified: true,
+//       };
+//     });
+//   });
+// };
+
+// const generatedProducts = generateRandomProducts(data);
+
+// console.log(generatedProducts);

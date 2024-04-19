@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const NavBar = styled.nav`
@@ -37,7 +38,9 @@ const CategoriesHeader = () => {
       <NavList>
         <NavItem>
           <Icon src="/assets/icons/control/menu.svg" />
-          <span>All categories</span>
+          <Link to="/list">
+            <span>All categories</span>
+          </Link>
         </NavItem>
         <NavItem>Hot offers</NavItem>
         <NavItem>Gift boxes</NavItem>

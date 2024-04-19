@@ -4,14 +4,13 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import AppLayout from "./ui/AppLayout";
-import { useEffect } from "react";
-import { getCategories, getProducts } from "./services/fakeStoreApi";
+import ProductList from "./pages/ProductList";
 
 function App() {
-  useEffect(() => {
-    getProducts();
-    getCategories();
-  }, []);
+  // useEffect(() => {
+  //   getProducts();
+  //   getCategories();
+  // }, []);
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
@@ -28,6 +27,7 @@ function App() {
         <Routes>
           <Route element={<AppLayout />}>
             <Route index element={<Home />} />
+            <Route path="/list" element={<ProductList />} />
           </Route>
         </Routes>
       </BrowserRouter>
